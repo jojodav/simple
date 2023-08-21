@@ -3,6 +3,8 @@
 
 <mapper namespace="tk.mybatis.simple.mapper.CountryMapperTest">
     <select id="selectAll" resultType="Country">
-        select id, country_name,country_code from country
+        <!--这里的字段名和country属性名一致-->
+
+        select id, countryname,countrycode from country
     </select>
 </mapper>
