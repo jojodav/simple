@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import java.io.IOException;
 import java.io.Reader;
 
+
 public class BaseMapperTest {
     private static SqlSessionFactory sqlSessionFactory;
 
