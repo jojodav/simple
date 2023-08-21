@@ -13,7 +13,7 @@ public class CountryMapperTest extends BaseMapperTest {
         SqlSession sqlSession=getSqlSession();
         try{
             List<Country> countryList=sqlSession.selectList(
-                    "tk.mybatis.simple.mapper.countryMapper.selectAll");
+                    "selectAll");
             printCountryList(countryList);
         }finally {
             sqlSession.close() ;

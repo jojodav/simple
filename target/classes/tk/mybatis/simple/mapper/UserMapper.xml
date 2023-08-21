@@ -7,12 +7,13 @@
         <result property="userPassword" column="user_password"/>
         <result property="userEmail" column="user_email"/>
         <result property="userInfo" column="user_info"/>
-        <result property="heaImg" column="head_img" jdbcType="blob"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP" />
+        <result property="heaImg" column="head_img" jdbcType="BLOB"/>
+        <result property="createTime" column="create_time"
+                jdbcType="TIMESTAMP" />
     </resultMap>
 
     <select id="selectById" resultMap="userMap">
-        select * from system_user where id=#{id}
+        select * from sys_user where id=#{id}
     </select>
 
     <select id="selectAll" resultType="tk.mybatis.simple.model.SysUser">
@@ -24,5 +25,18 @@
                head_img headImg,
                create_time createTime
         from sys_user
+    </select>
+
+    <select id="selectRolesByUserId" resultType="tk.mybatis.simple.model.SysRole">
+        select r.id,
+               r.role_name roleName,
+               r.enabled,
+               r.create_by createBy,
+               r.create_time createTime
+        from sys_user u
+            inner join sys_user_role ur on  u.id=ur.user_id
+            inner join sys_role r on ur.role_id=r.id
+            where u.id=#{userId}
+
     </select>
 </mapper>
