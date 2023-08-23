@@ -11,6 +11,6 @@ public class SysUser {
     private String userPassword;
     private String userEmail;
     private String userInfo;
-    private byte[] heaImg;
+    private byte[] headImg;
     private Date createTime;
 }

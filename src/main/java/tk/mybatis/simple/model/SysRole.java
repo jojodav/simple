@@ -11,4 +11,6 @@ public class SysRole {
     private Boolean enabled;
     private Integer createBy;
     private Date createTime;
+
+    private SysUser user;
 }

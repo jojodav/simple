@@ -15,4 +15,14 @@ public interface UserMapper {
     List<SysUser> selectAll();
 
     List<SysRole> selectRolesByUserId(Long userId);
+
+    int insert(SysUser sysUser);
+
+    //插入并且生成主键
+    int insert2(SysUser sysUser);
+
+    //插入并生成主键，然后通过一个insert 的 select 子句获取
+    int insert3(SysUser sysUser);
+
+    int updateById(SysUser sysUser);
 }
