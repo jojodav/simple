@@ -6,17 +6,20 @@ import tk.mybatis.simple.model.Country;
 
 import java.util.List;
 
+/**
+ * @author Jodav
+ *
+ */
 public class CountryMapperTest extends BaseMapperTest {
 
     @Test
     public void testSelectAll() {
-        SqlSession sqlSession = getSqlSession();
-        try {
+        try (SqlSession sqlSession = getSqlSession()) {
             List<Country> countryList = sqlSession.selectList(
                     "selectAll");
             printCountryList(countryList);
-        } finally {
-            sqlSession.close();
+        } catch (Exception e) {
+            System.out.println("这是一个不能");
         }
     }
 
