@@ -9,23 +9,23 @@ import java.util.List;
 public class CountryMapperTest extends BaseMapperTest {
 
     @Test
-    public void testSelectAll(){
-        SqlSession sqlSession=getSqlSession();
-        try{
-            List<Country> countryList=sqlSession.selectList(
+    public void testSelectAll() {
+        SqlSession sqlSession = getSqlSession();
+        try {
+            List<Country> countryList = sqlSession.selectList(
                     "selectAll");
             printCountryList(countryList);
-        }finally {
-            sqlSession.close() ;
+        } finally {
+            sqlSession.close();
         }
     }
 
-    private void printCountryList(List<Country> countryList){
-        for (Country country: countryList) {
-             System.out.printf("%-4d%4s%4s\n",
-                     country.getId(),
-                     country.getCountryName(),
-                     country.getCountryCode());
+    private void printCountryList(List<Country> countryList) {
+        for (Country country : countryList) {
+            System.out.printf("%-4d%4s%4s\n",
+                    country.getId(),
+                    country.getCountryName(),
+                    country.getCountryCode());
 
         }
     }
