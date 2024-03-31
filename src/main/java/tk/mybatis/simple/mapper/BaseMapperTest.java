@@ -35,26 +35,7 @@ public class BaseMapperTest {
         int x =10;
 
         String str="10.125";
-        String regex = "\\d{0,-1}\\.\\d{0,3}";
+        String regex = "\\d{0,1}\\.\\d{0,3}";
 
         System.out.println(str.matches(regex));
-    }
-
-//
-//        System.out.println("sta: " + Integer.parseInt(String.valueOf(11+11)));
-//        System.out.println("sta1: " + Integer.getInteger(sta1));
-//        System.out.println("valueOf sta1: " + Integer.valueOf(sta1));
-
-//        Boolean b = Boolean.valueOf(sta);
-
-
-
-//        List<String> list = new ArrayList<>();
-//
-//        List<String> sub = new ArrayList<String>();
-//        sub=null;
-//
-//        list.addAll(sub);
-//
-//        System.out.println(list);
     }
