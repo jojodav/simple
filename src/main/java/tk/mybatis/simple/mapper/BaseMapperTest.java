@@ -40,10 +40,6 @@ public class BaseMapperTest {
 //        String sta = x + " + " + x + " + 11";
 //        String sta1 = "11+11";
 
-//        ScriptEngineManager mgr = new ScriptEngineManager();
-//        ScriptEngine engine = mgr.getEngineByName("javascript");
-//        String foo ="40+2";
-//        System.out.println(engine.eval(foo));
         String str="10.125";
         String regex = "\\d{0,-1}\\.\\d{0,3}";
 
