@@ -34,16 +34,9 @@ public class BaseMapperTest {
     public static void main(String[] args) throws ScriptException {
         int x =10;
 
-//        String sta0= "11";
-//        System.out.println("直接数字转换: " + Integer.valueOf(sta0)); // 可直接数字
-//
-//        String sta = x + " + " + x + " + 11";
-//        String sta1 = "11+11";
-
         String str="10.125";
         String regex = "\\d{0,-1}\\.\\d{0,3}";
 
-//        Integer.parseInt("1s");
         System.out.println(str.matches(regex));
     }
 
