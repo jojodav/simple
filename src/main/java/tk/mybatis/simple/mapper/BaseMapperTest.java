@@ -32,11 +32,10 @@ public class BaseMapperTest {
     }
 
     public static void main(String[] args) throws ScriptException {
-        int x = 10;
+        int x =10;
 
-        String str = "10.125";
+        String str="10.125";
         String regex = "\\d{0,1}\\.\\d{0,3}";
 
         System.out.println(str.matches(regex));
     }
-}
